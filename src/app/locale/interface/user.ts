@@ -1,3 +1,4 @@
+import { Challenge } from '../interface/challenge';
 export interface User {
     id: number;
     username: string;
@@ -7,5 +8,5 @@ export interface User {
     honor: number;
     leadership: number;
     languages: string[];
-    language: string;
+    challenges: Challenge[];
 }

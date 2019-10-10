@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row text-center" *ngFor="let challenge of challenges">
+    <div class="row text-center" *ngFor="let user of users">
         <div class="col-6">
             <div class="accordion" id="accordionExample">
                 <div class="card">
@@ -7,7 +7,7 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#one"
                                 aria-expanded="true" aria-controls="one">
-                                <!-- {{challenge.name}} -->
+                                {{user.name}}
                             </button>
                         </h2>
                     </div>
@@ -16,21 +16,31 @@
                             <div class="container-fluid">
                                 <div class="row text-center">
                                     <div class="col-2">
-                                            <div class="challengeTitle">
-                                                    Rank
-                                                </div>
-                                                <!-- {{challenge.rank}} -->
-                                    </div>
-                                    <div class="col-2">
                                         <div class="challengeTitle">
                                             Rank
                                         </div>
-                                       <!-- {{challenge.rank}} -->
+                                        <p>
+                                            {{user.rank}}
+                                        </p>
+
+                                        <!-- {{challenge.rank}} -->
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Honor
+                                        </div>
+                                        <p>
+                                            {{user.honor}}
+                                        </p>
+                                        <!-- {{challenge.rank}} -->
                                     </div>
                                     <div class="col-6">
                                         <div class="challengeTitle">
                                             Name
                                         </div>
+                                        <p>
+                                            {{user.name}}
+                                        </p>
                                         <!-- {{challenge.name}} -->
                                     </div>
                                     <div class="col-2">
@@ -38,6 +48,9 @@
                                             Language
                                         </div>
                                         <!-- {{challenge.language}} -->
+                                    </div>
+                                    <div *ngFor="let challenge of user.challenges">
+                                        <p>{{challenge.name}}</p>
                                     </div>
                                 </div>
                             </div>
