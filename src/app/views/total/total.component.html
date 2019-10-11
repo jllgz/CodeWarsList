@@ -1,17 +1,19 @@
 <div class="accordion" id="accordionExample">
     <div class="container">
         <div class="row text-center">
-            <div class="col-6 my-2" *ngFor="let user of users">
+            <div class="col-12 my-2" *ngFor="let user of users">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#one"
-                                aria-expanded="true" aria-controls="one">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                [attr.data-target]="'#' + user.username.replace('.', '')" aria-expanded="true"
+                                [attr.aria-controls]="">
                                 {{user.name}}
                             </button>
                         </h2>
                     </div>
-                    <div id="one" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div id="{{user.username.replace('.', '')}}" class="collapse" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
                         <div class="card-body">
                             <div class="container-fluid">
                                 <div class="row text-center">
