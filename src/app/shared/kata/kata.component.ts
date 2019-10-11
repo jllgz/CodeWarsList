@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'cwl-kata',
   templateUrl: './kata.component.html',

@@ -1,1 +1,58 @@
-<p>honor works!</p>
+<div class="accordion" id="accordionExample">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-6 my-2" *ngFor="let user of users">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#one"
+                                aria-expanded="true" aria-controls="one">
+                                {{user.name}} - Honor Rank:{{user.honor}}
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="one" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row text-center">
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Rank
+                                        </div>
+                                        <p>
+                                            {{user.rank}}
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Honor
+                                        </div>
+                                        <p>
+                                            {{user.honor}}
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="challengeTitle">
+                                            Name
+                                        </div>
+                                        <p>
+                                            {{user.name}}
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Language
+                                        </div>
+                                    </div>
+                                    <div *ngFor="let challenge of user.challenges">
+                                        <p>{{challenge.name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

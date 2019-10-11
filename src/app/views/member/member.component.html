@@ -1,5 +1,5 @@
 <div class="accordion" id="accordionExample">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row text-center">
             <div class="col-6 my-2" *ngFor="let user of users">
                 <div class="card">
@@ -22,8 +22,6 @@
                                         <p>
                                             {{user.rank}}
                                         </p>
-
-                                        <!-- {{challenge.rank}} -->
                                     </div>
                                     <div class="col-2">
                                         <div class="challengeTitle">
@@ -32,7 +30,6 @@
                                         <p>
                                             {{user.honor}}
                                         </p>
-                                        <!-- {{challenge.rank}} -->
                                     </div>
                                     <div class="col-6">
                                         <div class="challengeTitle">
@@ -41,13 +38,11 @@
                                         <p>
                                             {{user.name}}
                                         </p>
-                                        <!-- {{challenge.name}} -->
                                     </div>
                                     <div class="col-2">
                                         <div class="challengeTitle">
                                             Language
                                         </div>
-                                        <!-- {{challenge.language}} -->
                                     </div>
                                     <div *ngFor="let challenge of user.challenges">
                                         <p>{{challenge.name}}</p>

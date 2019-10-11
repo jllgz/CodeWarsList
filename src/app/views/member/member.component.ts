@@ -12,9 +12,13 @@ export class MemberComponent implements OnInit {
   data = CodeWarsData;
   users: User[] = [];
   challenges: Challenge[] = [];
+  userId: number;
+  userName;
+  
   constructor() { }
 
   ngOnInit() {
+    this.userId = this.data.user[0].id;
     this.data.user.forEach(i => {
       this.users.push(i);
     });

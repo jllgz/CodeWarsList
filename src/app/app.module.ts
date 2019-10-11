@@ -15,6 +15,7 @@ import { RankComponent } from './views/rank/rank.component';
 import { HonorComponent } from './views/honor/honor.component';
 import { TotalComponent } from './views/total/total.component';
 import { InfoComponent } from './shared/info/info.component';
+import { ReservationComponent } from './views/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InfoComponent } from './shared/info/info.component';
     RankComponent,
     HonorComponent,
     TotalComponent,
-    InfoComponent
+    InfoComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
