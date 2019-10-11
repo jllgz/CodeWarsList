@@ -14,6 +14,7 @@ import { MemberComponent } from './views/member/member.component';
 import { RankComponent } from './views/rank/rank.component';
 import { HonorComponent } from './views/honor/honor.component';
 import { TotalComponent } from './views/total/total.component';
+import { InfoComponent } from './shared/info/info.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TotalComponent } from './views/total/total.component';
     MemberComponent,
     RankComponent,
     HonorComponent,
-    TotalComponent
+    TotalComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
