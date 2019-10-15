@@ -26,7 +26,6 @@ export class MemberComponent implements OnInit {
     this.data.user.forEach(i => {
       this.users.push(i);
     });
-    console.log(this.users);
     this.http.get(this.apiUrl + '').toPromise().then(
       res =>{
         console.log(res);
