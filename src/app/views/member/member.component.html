@@ -1,54 +1,53 @@
 <div class="accordion" id="accordionExample">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 my-2" *ngFor="let user of users">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    [attr.data-target]="'#' + user.username.replace('.', '')" aria-expanded="true"
-                                    [attr.aria-controls]="">
-                                    {{user.name}}
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="{{user.username.replace('.', '')}}" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div class="container-fluid">
-                                    <div class="row text-center">
-                                        <div class="col-2">
-                                            <div class="challengeTitle">
-                                                Rank
-                                            </div>
-                                            <p>
-                                                {{user.rank}}
-                                            </p>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 my-2" *ngFor="let user of users">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                [attr.data-target]="'#' + user.username.replace('.', '')" aria-expanded="true"
+                                [attr.aria-controls]="">
+                                {{user.name}}
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="{{user.username.replace('.', '')}}" class="collapse" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row text-center">
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Rank
                                         </div>
-                                        <div class="col-2">
-                                            <div class="challengeTitle">
-                                                Honor
-                                            </div>
-                                            <p>
-                                                {{user.honor}}
-                                            </p>
+                                        <p>
+                                            {{user.rank}}
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Honor
                                         </div>
-                                        <div class="col-6">
-                                            <div class="challengeTitle">
-                                                Name
-                                            </div>
-                                            <p>
-                                                {{user.name}}
-                                            </p>
+                                        <p>
+                                            {{user.honor}}
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="challengeTitle">
+                                            Name
                                         </div>
-                                        <div class="col-2">
-                                            <div class="challengeTitle">
-                                                Language
-                                            </div>
+                                        <p>
+                                            {{user.name}}
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="challengeTitle">
+                                            Language
                                         </div>
-                                        <div *ngFor="let challenge of user.challenges">
-                                            <p>{{challenge.name}}</p>
-                                        </div>
+                                    </div>
+                                    <div *ngFor="let challenge of user.challenges">
+                                        <p>{{challenge.name}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -58,3 +57,4 @@
             </div>
         </div>
     </div>
+</div>
