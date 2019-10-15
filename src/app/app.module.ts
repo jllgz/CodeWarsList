@@ -16,6 +16,7 @@ import { HonorComponent } from './views/honor/honor.component';
 import { TotalComponent } from './views/total/total.component';
 import { InfoComponent } from './shared/info/info.component';
 import { ReservationComponent } from './views/reservation/reservation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ReservationComponent } from './views/reservation/reservation.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
